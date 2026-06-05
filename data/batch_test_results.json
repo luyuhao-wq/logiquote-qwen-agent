@@ -1,0 +1,382 @@
+[
+  {
+    "original_inquiry": "Hi, I need to ship 20 cartons of home decor products from Ningbo to Los Angeles. Total weight is around 480 kg and volume is 3.2 CBM. Could you quote me the cheapest option within 25 days?",
+    "extracted_fields": {
+      "inquiry_summary": "The customer wants to ship 20 cartons of home decor products from Ningbo to Los Angeles and is looking for the cheapest option within 25 days.",
+      "origin": "Ningbo",
+      "destination": "Los Angeles",
+      "cargo_type": "home decor products",
+      "weight": "480 kg",
+      "volume": "3.2 CBM",
+      "package_details": "20 cartons",
+      "shipping_mode": "missing",
+      "delivery_requirement": "within 25 days",
+      "preferred_option": "cheapest",
+      "trade_term": "missing",
+      "cargo_value": "missing",
+      "pickup_address": "missing",
+      "delivery_address_type": "missing",
+      "insurance_requirement": "missing",
+      "customs_clearance_requirement": "missing",
+      "special_cargo_risk": "No obvious special cargo risk mentioned.",
+      "confidence_level": "medium"
+    },
+    "missing_field_check": {
+      "missing_required_fields": [
+        "shipping_mode",
+        "trade_term",
+        "cargo_value",
+        "pickup_address",
+        "delivery_address_type",
+        "insurance_requirement",
+        "customs_clearance_requirement"
+      ],
+      "unclear_fields": [],
+      "risk_notes": [
+        "Customer prefers the cheapest option, but shipping mode is missing — critical for cost and timeline alignment.",
+        "Missing trade term (e.g., FOB, DAP, DDP) creates ambiguity on responsibility for customs clearance, duties, and final delivery.",
+        "Cargo value is missing, impacting insurance valuation, customs declaration accuracy, and potential duty/tax calculations.",
+        "Pickup address and delivery address type (e.g., residential, commercial, Amazon warehouse) are missing — affects pickup feasibility, delivery surcharges, and service eligibility.",
+        "No confirmation of insurance or customs clearance requirements, yet both are essential for cross-border shipment execution and risk mitigation."
+      ],
+      "quotation_readiness": "needs_follow_up_before_quote",
+      "recommended_next_action": "Request confirmation of shipping mode, trade term, cargo value, pickup address, delivery address type, insurance requirement, and customs clearance responsibility."
+    },
+    "reply_generation": {
+      "customer_reply_draft": "Hi, thank you for your inquiry. We can help identify a cost-effective shipping solution for your 20 cartons of home decor products (480 kg / 3.2 CBM) from Ningbo to Los Angeles within 25 days. To prepare an accurate and suitable quotation, could you please confirm: (1) your exact pickup address in Ningbo; (2) the destination address type (e.g., residential, commercial, warehouse, or Amazon FBA); (3) your preferred shipping mode (e.g., sea freight LCL, air freight, or express); and (4) the applicable trade term (e.g., EXW, FOB, DAP, or DDP)? Once these key details are confirmed, we’ll promptly provide a tailored quotation.",
+      "internal_operation_notes": [
+        "Customer prioritizes lowest cost and 25-day delivery window.",
+        "Weight, volume, and package count are confirmed; cargo appears non-hazardous.",
+        "Critical missing fields: shipping_mode, trade_term, pickup_address, delivery_address_type — all directly impact pricing, service scope, and feasibility.",
+        "Cargo_value, insurance_requirement, and customs_clearance_requirement remain unconfirmed but may be clarified after initial service scope is aligned."
+      ],
+      "follow_up_questions": [
+        "What is the exact pickup address in Ningbo?",
+        "Is the destination a residential address, commercial address, warehouse, Amazon FBA address, or another type?",
+        "Which shipping mode do you prefer — sea freight (LCL), air freight, or express courier?",
+        "What trade term applies to this shipment (e.g., EXW, FOB, DAP, or DDP)?"
+      ]
+    },
+    "case_id": "case_001",
+    "language": "English",
+    "expected_output_focus": [
+      "origin",
+      "destination",
+      "cargo_type",
+      "weight",
+      "volume",
+      "delivery_requirement",
+      "preferred_option",
+      "missing_pickup_address",
+      "missing_destination_type",
+      "missing_incoterm"
+    ]
+  },
+  {
+    "original_inquiry": "我想从深圳发一批蓝牙音箱到美国亚马逊仓，大概200kg，1.5CBM，想走空运加派送，请问多少钱？",
+    "extracted_fields": {
+      "inquiry_summary": "The customer wants to ship Bluetooth speakers from Shenzhen to an Amazon warehouse in the US, approximately 200 kg and 1.5 CBM, via air freight with last-mile delivery, and is requesting a quotation.",
+      "origin": "Shenzhen",
+      "destination": "US Amazon warehouse",
+      "cargo_type": "Bluetooth speakers",
+      "weight": "200 kg",
+      "volume": "1.5 CBM",
+      "package_details": "missing",
+      "shipping_mode": "air freight with delivery (air + last-mile)",
+      "delivery_requirement": "missing",
+      "preferred_option": "missing",
+      "trade_term": "missing",
+      "cargo_value": "missing",
+      "pickup_address": "missing",
+      "delivery_address_type": "Amazon warehouse",
+      "insurance_requirement": "missing",
+      "customs_clearance_requirement": "missing",
+      "special_cargo_risk": "Bluetooth speakers may contain lithium batteries — potential special cargo risk.",
+      "confidence_level": "medium"
+    },
+    "missing_field_check": {
+      "missing_required_fields": [
+        "package_details",
+        "delivery_requirement",
+        "trade_term",
+        "cargo_value",
+        "pickup_address",
+        "insurance_requirement",
+        "customs_clearance_requirement"
+      ],
+      "unclear_fields": [],
+      "risk_notes": [
+        "Bluetooth speakers likely contain lithium-ion batteries — subject to IATA dangerous goods regulations for air freight; requires UN3481 classification, proper packaging, labeling, and shipper declaration.",
+        "Delivery to an Amazon warehouse implies strict appointment scheduling, labeling (FBA barcodes), and compliance with Amazon’s carrier requirements (e.g., UPS/FedEx/USPS or approved LTL carriers); last-mile delivery adds complexity.",
+        "Cargo value is missing, impacting customs valuation, duty/tax calculation, and insurance coverage.",
+        "Trade term (e.g., DAP, DDP, EXW) is missing — critical to determine responsibility for import clearance, duties, taxes, and final delivery to Amazon warehouse."
+      ],
+      "quotation_readiness": "needs_follow_up_before_quote",
+      "recommended_next_action": "Request package details (dimensions, carton count, palletization), delivery requirement (timeline/appointment window), trade term, cargo value, pickup address, insurance requirement, and confirmation of lithium battery compliance documentation (MSDS, UN3481 certification). Clarify if DDP is needed for Amazon FBA entry."
+    },
+    "reply_generation": {
+      "customer_reply_draft": "您好，感谢您的咨询！我们可为您安排从深圳到美国亚马逊仓库的空运+尾程派送服务。为提供准确报价，烦请您确认以下信息：1）货物的具体包装情况（如纸箱数量、单箱尺寸/重量、是否托盘化）；2）亚马逊仓库的收货要求（如预约时间窗口、FBA货件编号或预计送达时限）；3）起运地详细上门取货地址；4）贸易条款（如EXW、DDP等），特别是是否需要我方负责清关、缴税及完成FBA入仓；5）货物总申报价值及是否需要保险。蓝牙音箱含锂电池，需符合IATA空运规范，后续我们也会协助确认相关合规文件。待以上信息明确后，我们将立即为您准备专业报价。",
+      "internal_operation_notes": [
+        "客户货物品类为蓝牙音箱，存在锂电风险（UN3481），须核查MSDS及危险品运输资质",
+        "目的地为美国亚马逊仓库，需满足FBA入仓要求（预约、标签、承运商合规）",
+        "已知：重量200kg、体积1.5CBM、运输方式为空运+尾程派送",
+        "缺失关键字段：包装细节、交付时效/预约要求、起运地址、贸易术语、货值、保险及清关需求",
+        "DDP模式对FBA入仓尤为重要，需优先确认"
+      ],
+      "follow_up_questions": [
+        "请提供货物的包装详情（例如：共多少纸箱？每箱长宽高及毛重？是否打托？托盘尺寸和数量？）",
+        "亚马逊仓库是否有指定收货时间窗口或FBA货件编号？您期望的最晚送达日期是？",
+        "请提供深圳具体的上门取货地址（含联系人及电话）",
+        "您希望采用何种贸易条款？是否需要我方全程负责美国清关、关税缴纳及送货至亚马逊仓库（即DDP）？",
+        "这批货物的商业发票总金额（USD）是多少？是否需要我们代为安排运输保险？"
+      ]
+    },
+    "case_id": "case_002",
+    "language": "Chinese",
+    "expected_output_focus": [
+      "origin",
+      "destination",
+      "cargo_type",
+      "weight",
+      "volume",
+      "shipping_mode",
+      "amazon_warehouse",
+      "battery_related_risk",
+      "missing_delivery_address",
+      "missing_cargo_value"
+    ]
+  },
+  {
+    "original_inquiry": "Need a DDP quote from Guangzhou to Toronto for 10 cartons of LED lights. Not sure about weight yet. Please advise.",
+    "extracted_fields": {
+      "inquiry_summary": "The customer needs a DDP quote for shipping 10 cartons of LED lights from Guangzhou to Toronto and is unsure of the weight.",
+      "origin": "Guangzhou",
+      "destination": "Toronto",
+      "cargo_type": "LED lights",
+      "weight": "missing",
+      "volume": "missing",
+      "package_details": "10 cartons",
+      "shipping_mode": "missing",
+      "delivery_requirement": "missing",
+      "preferred_option": "missing",
+      "trade_term": "DDP",
+      "cargo_value": "missing",
+      "pickup_address": "missing",
+      "delivery_address_type": "missing",
+      "insurance_requirement": "missing",
+      "customs_clearance_requirement": "DDP implies full customs clearance included",
+      "special_cargo_risk": "LED lights may contain lithium batteries — potential special cargo risk; unclear if integrated or standalone batteries.",
+      "confidence_level": "medium"
+    },
+    "missing_field_check": {
+      "missing_required_fields": [
+        "weight",
+        "volume",
+        "shipping_mode",
+        "delivery_requirement",
+        "pickup_address",
+        "delivery_address_type",
+        "cargo_value",
+        "insurance_requirement"
+      ],
+      "unclear_fields": [
+        "special_cargo_risk"
+      ],
+      "risk_notes": [
+        "LED lights may contain lithium batteries — requires confirmation of battery type (integrated vs. standalone), UN number, watt-hour rating, and compliance with IATA/IMDG regulations.",
+        "DDP trade term implies full responsibility for customs clearance, duties, taxes, and final delivery — but delivery address type (e.g., residential, commercial, Amazon warehouse) is missing, affecting cost and feasibility.",
+        "Cargo value is missing, critical for DDP duty/tax calculation, insurance valuation, and customs declaration.",
+        "Weight and volume are missing — essential for mode selection (air/ocean/freight class), dimensional weight calculation, and DDP landed cost modeling.",
+        "No pickup address provided — required to assess local pickup feasibility, costs, and documentation."
+      ],
+      "quotation_readiness": "needs_follow_up_before_quote",
+      "recommended_next_action": "Request weight, volume, pickup address, delivery address type, cargo value, insurance requirement, and battery specifications (if applicable) for LED lights. Clarify delivery timeline and confirm whether batteries are integrated or removable."
+    },
+    "reply_generation": {
+      "customer_reply_draft": "Hi, thank you for your inquiry. We’re happy to prepare a DDP quotation for 10 cartons of LED lights from Guangzhou to Toronto. To ensure accuracy and compliance—especially since LED lights may contain lithium batteries—we’ll need a few key details: the approximate weight and volume per carton, your exact pickup address in Guangzhou, the destination address type (e.g., residential, commercial, or Amazon warehouse), the total declared cargo value (for duty/tax calculation and customs declaration), and whether you require cargo insurance. Additionally, could you confirm if the LED lights include integrated or removable lithium batteries—and if known, their UN number and watt-hour rating? Once we receive these details, we’ll promptly prepare a tailored DDP quotation for you.",
+      "internal_operation_notes": [
+        "Customer explicitly requested DDP service — full customs clearance, duties, taxes, and final delivery included.",
+        "LED lights pose potential lithium battery risk; battery configuration (integrated vs. standalone), UN number, and Wh rating must be verified for regulatory compliance (IATA/IMDG).",
+        "Critical missing data: weight, volume, pickup address, delivery address type, cargo value, and insurance requirement — all essential for DDP landed cost modeling.",
+        "Shipping mode and delivery timeline not specified — will impact air/ocean recommendation and pricing."
+      ],
+      "follow_up_questions": [
+        "What is the approximate gross weight and volume (L×W×H in cm or inches) of each carton?",
+        "What is the exact pickup address in Guangzhou?",
+        "Is the destination in Toronto a residential address, commercial facility, Amazon warehouse, or another type?",
+        "What is the total commercial invoice value (USD) of the 10 cartons?",
+        "Do you require cargo insurance? If yes, what coverage level is preferred?",
+        "Do the LED lights contain lithium batteries? If so, are they built-in (integrated) or removable, and do you have the UN number and watt-hour (Wh) rating?"
+      ]
+    },
+    "case_id": "case_003",
+    "language": "English",
+    "expected_output_focus": [
+      "origin",
+      "destination",
+      "cargo_type",
+      "ddp_requirement",
+      "missing_weight",
+      "missing_volume",
+      "missing_carton_dimensions",
+      "missing_cargo_value",
+      "missing_delivery_address"
+    ]
+  },
+  {
+    "original_inquiry": "We have 3 pallets of furniture ready in Foshan. Please help check sea freight to Sydney. The customer wants a cheaper option, not urgent.",
+    "extracted_fields": {
+      "inquiry_summary": "The customer has 3 pallets of furniture ready in Foshan and requests a sea freight quotation to Sydney, preferring a cheaper (cost-effective) option and indicating it is not urgent.",
+      "origin": "Foshan",
+      "destination": "Sydney",
+      "cargo_type": "furniture",
+      "weight": "missing",
+      "volume": "missing",
+      "package_details": "3 pallets",
+      "shipping_mode": "sea freight",
+      "delivery_requirement": "not urgent",
+      "preferred_option": "cheaper",
+      "trade_term": "missing",
+      "cargo_value": "missing",
+      "pickup_address": "missing",
+      "delivery_address_type": "missing",
+      "insurance_requirement": "missing",
+      "customs_clearance_requirement": "missing",
+      "special_cargo_risk": "Furniture may involve oversized or fragile items; no explicit risk stated but 'furniture' carries potential for fragility or irregular dimensions.",
+      "confidence_level": "medium"
+    },
+    "missing_field_check": {
+      "missing_required_fields": [
+        "weight",
+        "volume",
+        "trade_term",
+        "cargo_value",
+        "pickup_address",
+        "delivery_address_type",
+        "insurance_requirement",
+        "customs_clearance_requirement"
+      ],
+      "unclear_fields": [],
+      "risk_notes": [
+        "Furniture may be oversized or fragile, requiring confirmation of dimensions, packaging, and handling instructions.",
+        "Cargo value is missing, impacting customs valuation, insurance calculation, and DDP/DAP determination.",
+        "Trade term is missing, making it unclear who is responsible for freight, insurance, duties, and customs clearance.",
+        "Pickup address and delivery address type (e.g., residential, commercial, warehouse like Amazon/FBA) are missing — critical for cost and feasibility assessment.",
+        "Customer prefers a cheaper option and confirms non-urgency, but without weight/volume, sea freight costing (e.g., LCL vs FCL, container type, stowability) cannot be determined."
+      ],
+      "quotation_readiness": "needs_follow_up_before_quote",
+      "recommended_next_action": "Request weight, volume, exact pickup address, delivery address type, trade term (e.g., FOB, CIF, DDP), cargo value, insurance requirement, and customs clearance responsibility. Also confirm furniture dimensions, packaging type, and any special handling needs."
+    },
+    "reply_generation": {
+      "customer_reply_draft": "Hi, thank you for your inquiry. We’re happy to help check a cost-effective sea freight option for your 3 pallets of furniture from Foshan to Sydney. To prepare an accurate and suitable quotation, could you please confirm the following: (1) the total weight and volume of the 3 pallets; (2) the exact pickup address in Foshan; (3) the type of destination address in Sydney (e.g., residential, commercial, warehouse, or Amazon/FBA); and (4) your preferred trade term (e.g., EXW, FOB, CIF, or DDP)? Once we have these details, we’ll promptly provide a tailored quotation.",
+      "internal_operation_notes": [
+        "Customer requests non-urgent, cost-effective sea freight for 3 pallets of furniture from Foshan to Sydney.",
+        "Weight and volume are critical missing fields — needed to determine LCL/FCL feasibility and stowability.",
+        "Pickup address and destination address type directly impact inland haulage and final delivery costs.",
+        "Trade term is essential to define service scope (e.g., customs clearance, insurance, duty responsibility).",
+        "Furniture carries potential fragility/oversize risk — dimensions and packaging may require follow-up if initial info raises concerns."
+      ],
+      "follow_up_questions": [
+        "What is the total gross weight and cubic meter (CBM) volume of the 3 pallets?",
+        "What is the exact pickup address in Foshan (including contact person and phone)?",
+        "Is the destination in Sydney a residential address, commercial premises, warehouse, or Amazon/FBA facility?",
+        "Which trade term do you prefer (e.g., EXW, FOB, CIF, or DDP)?"
+      ]
+    },
+    "case_id": "case_004",
+    "language": "English",
+    "expected_output_focus": [
+      "origin",
+      "destination",
+      "cargo_type",
+      "package_type",
+      "shipping_mode",
+      "preferred_option",
+      "missing_weight",
+      "missing_volume",
+      "missing_pickup_address",
+      "missing_delivery_address"
+    ]
+  },
+  {
+    "original_inquiry": "有一批货要发到德国，想问一下价格，货物还没完全打包好，可能走海运。",
+    "extracted_fields": {
+      "inquiry_summary": "The customer wants to ship a batch of goods to Germany and is inquiring about pricing; the cargo is not fully packed yet, and sea freight is a possible option.",
+      "origin": "missing",
+      "destination": "Germany",
+      "cargo_type": "missing",
+      "weight": "missing",
+      "volume": "missing",
+      "package_details": "missing",
+      "shipping_mode": "sea freight",
+      "delivery_requirement": "missing",
+      "preferred_option": "missing",
+      "trade_term": "missing",
+      "cargo_value": "missing",
+      "pickup_address": "missing",
+      "delivery_address_type": "missing",
+      "insurance_requirement": "missing",
+      "customs_clearance_requirement": "missing",
+      "special_cargo_risk": "No obvious special cargo risk mentioned.",
+      "confidence_level": "low"
+    },
+    "missing_field_check": {
+      "missing_required_fields": [
+        "origin",
+        "cargo_type",
+        "weight",
+        "volume",
+        "package_details",
+        "delivery_requirement",
+        "trade_term",
+        "cargo_value",
+        "pickup_address",
+        "delivery_address_type",
+        "insurance_requirement",
+        "customs_clearance_requirement"
+      ],
+      "unclear_fields": [],
+      "risk_notes": [
+        "Origin is missing — critical for origin handling, documentation, and transit time estimation.",
+        "Cargo type, weight, volume, and package details are all missing — prevents accurate stowage planning, container selection, and regulatory classification.",
+        "Delivery requirement (e.g., timeline, appointment, cut-off) is missing — impacts service level and routing options.",
+        "Trade term (e.g., FOB, EXW, DAP, DDP) is missing — determines responsibility for customs clearance, duties, and final delivery.",
+        "Cargo value is missing — required for insurance valuation and German customs declaration (mandatory for imports > €150).",
+        "Pickup address and delivery address type (e.g., residential, commercial, Amazon warehouse) are missing — affects inland haulage cost and feasibility.",
+        "Insurance and customs clearance requirements are unspecified — introduces liability and compliance uncertainty."
+      ],
+      "quotation_readiness": "insufficient_information",
+      "recommended_next_action": "Request full shipment details: origin, cargo type, estimated weight/volume, packaging, delivery timeline, trade term, cargo value, pickup address, delivery address type, and insurance/customs clearance preferences."
+    },
+    "reply_generation": {
+      "customer_reply_draft": "您好，感谢您的咨询！我们很乐意为您核算发往德国的海运报价。由于货物尚未完全打包，目前缺少一些关键信息，例如：发货地（如上海、深圳等具体城市及详细地址）、货物类型、预估总重量和体积、包装方式（如纸箱/木箱/托盘）、期望的运输时效、贸易条款（如EXW、FOB、DDP等），以及是否需要我们协助办理清关或保险。请您提供以上基本信息后，我们将尽快为您准备准确、合适的海运报价方案。",
+      "internal_operation_notes": [
+        "客户明确倾向海运，但未提供 origin、cargo_type、weight、volume、package_details 等核心计价参数。",
+        "destination 为德国，但 delivery_address_type（如商业地址、住宅、亚马逊仓库等）缺失，影响末端派送成本评估。",
+        "cargo_value 缺失，而德国海关对货值＞€150的进口货物要求完整申报，需提前确认。",
+        "trade_term 和 customs_clearance_requirement 均未说明，直接影响服务范围与责任划分。",
+        "整体信息完整性低，当前无法启动正式报价流程。"
+      ],
+      "follow_up_questions": [
+        "请问货物从中国哪个城市及具体地址（pickup_address）发出？",
+        "货物属于哪类产品（如家居用品、电子配件、服装等）？预估总毛重和总体积是多少？采用何种包装方式（如纸箱数量/尺寸、是否带托盘）？",
+        "您期望的大致出运时间及送达德国的最晚时限（delivery_requirement）是？",
+        "您倾向的贸易条款是？例如工厂提货（EXW）、离岸价（FOB）、完税交货（DDP）等？是否需要我方负责德国清关及送货上门？",
+        "货物总价值（USD或EUR）约为多少？是否需要我们代为安排海运保险？"
+      ]
+    },
+    "case_id": "case_005",
+    "language": "Chinese",
+    "expected_output_focus": [
+      "destination",
+      "shipping_mode",
+      "missing_origin",
+      "missing_cargo_type",
+      "missing_weight",
+      "missing_volume",
+      "missing_package_details",
+      "missing_delivery_deadline",
+      "missing_trade_term"
+    ]
+  }
+]
