@@ -23,6 +23,7 @@ Please extract the following fields:
   "package_details": "",
   "shipping_mode": "",
   "delivery_requirement": "",
+  "preferred_option": "",
   "trade_term": "",
   "cargo_value": "",
   "pickup_address": "",
@@ -31,5 +32,4 @@ Please extract the following fields:
   "customs_clearance_requirement": "",
   "special_cargo_risk": "",
   "confidence_level": ""
-  "preferred_option": "",
 }
