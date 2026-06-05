@@ -20,6 +20,12 @@ The agent can:
 4. Produce an internal quotation preparation brief.
 5. Support human-in-the-loop review before any response is sent to the customer.
 
+## System Architecture
+
+![LogiQuote System Architecture](docs/architecture_diagram.png)
+
+**Figure 1. LogiQuote system architecture.** The system uses a Streamlit frontend, a modular LogiQuote agent workflow, and Qwen Cloud API to transform messy logistics inquiries into structured quotation briefs, missing-field checks, risk notes, reply drafts, and human-reviewable outputs.
+
 ## Key Features
 
 - **Inquiry Summary**: Summarizes the customer's logistics request.
