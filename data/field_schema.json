@@ -1,1 +1,69 @@
-
+{
+  "required_fields": {
+    "origin": {
+      "description": "The city, port, warehouse, or pickup location where the shipment starts.",
+      "examples": ["Ningbo", "Shenzhen", "Guangzhou", "Foshan"]
+    },
+    "destination": {
+      "description": "The destination city, country, warehouse, port, or delivery address.",
+      "examples": ["Los Angeles", "Toronto", "Sydney", "Germany"]
+    },
+    "cargo_type": {
+      "description": "The type of goods being shipped.",
+      "examples": ["home decor products", "Bluetooth speakers", "LED lights", "furniture"]
+    },
+    "weight": {
+      "description": "The gross weight of the shipment.",
+      "examples": ["480 kg", "200 kg"]
+    },
+    "volume": {
+      "description": "The cargo volume, usually measured in CBM.",
+      "examples": ["3.2 CBM", "1.5 CBM"]
+    },
+    "package_details": {
+      "description": "The number of cartons, pallets, dimensions, or packaging method.",
+      "examples": ["20 cartons", "3 pallets", "10 cartons"]
+    },
+    "shipping_mode": {
+      "description": "The preferred transportation mode.",
+      "examples": ["air freight", "sea freight", "truck delivery", "DDP"]
+    },
+    "delivery_requirement": {
+      "description": "The customer's preferred delivery time or urgency.",
+      "examples": ["within 25 days", "not urgent", "as soon as possible"]
+    },
+    "trade_term": {
+      "description": "Trade term or service type required by the customer.",
+      "examples": ["DDP", "FOB", "EXW", "door-to-door"]
+    },
+    "cargo_value": {
+      "description": "The declared value of the cargo, useful for insurance and customs clearance.",
+      "examples": ["USD 5,000", "not provided"]
+    }
+  },
+  "optional_fields": {
+    "pickup_address": {
+      "description": "The detailed pickup address or warehouse location."
+    },
+    "delivery_address_type": {
+      "description": "Whether the destination is a residential address, commercial address, Amazon warehouse, Wayfair warehouse, port, or another type."
+    },
+    "insurance_requirement": {
+      "description": "Whether the customer needs cargo insurance."
+    },
+    "customs_clearance_requirement": {
+      "description": "Whether customs clearance support is required."
+    },
+    "special_cargo_risk": {
+      "description": "Potential risks such as battery, liquid, fragile goods, oversized cargo, or dangerous goods."
+    }
+  },
+  "output_sections": [
+    "inquiry_summary",
+    "structured_quotation_form",
+    "missing_information",
+    "risk_and_clarification_notes",
+    "internal_operation_notes",
+    "customer_reply_draft"
+  ]
+}
