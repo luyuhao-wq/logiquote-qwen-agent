@@ -17,8 +17,13 @@ The system converts messy customer inquiries into structured quotation briefs th
 This architecture is designed for the **Autopilot Agent** track because it automates a real-world business workflow while keeping human staff in control before any customer-facing response is sent.
 
 ---
-
 ## Architecture Flow
+
+![LogiQuote System Architecture](architecture_diagram.png)
+
+**Figure 1. LogiQuote system architecture.** This diagram shows how the Streamlit frontend, LogiQuote agent workflow, Qwen Cloud API, supporting prompt/data modules, human review checkpoint, and planned Alibaba Cloud deployment are connected.
+
+The core workflow can also be summarized as:
 
 ```text
 Customer / Logistics CS Staff
@@ -46,6 +51,8 @@ Human Review Checkpoint
         v
 Customer Follow-up Reply
 ```
+
+The diagram highlights that LogiQuote is not a simple chatbot. It is a modular AI workflow that converts ambiguous customer inquiries into structured, reviewable quotation preparation outputs.
 
 ---
 
