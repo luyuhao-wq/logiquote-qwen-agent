@@ -31,4 +31,5 @@ Please extract the following fields:
   "customs_clearance_requirement": "",
   "special_cargo_risk": "",
   "confidence_level": ""
+  "preferred_option": "",
 }
