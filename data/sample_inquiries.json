@@ -1,1 +1,85 @@
-
+[
+  {
+    "case_id": "case_001",
+    "language": "English",
+    "inquiry": "Hi, I need to ship 20 cartons of home decor products from Ningbo to Los Angeles. Total weight is around 480 kg and volume is 3.2 CBM. Could you quote me the cheapest option within 25 days?",
+    "expected_output_focus": [
+      "origin",
+      "destination",
+      "cargo_type",
+      "weight",
+      "volume",
+      "delivery_requirement",
+      "preferred_option",
+      "missing_pickup_address",
+      "missing_destination_type",
+      "missing_incoterm"
+    ]
+  },
+  {
+    "case_id": "case_002",
+    "language": "Chinese",
+    "inquiry": "我想从深圳发一批蓝牙音箱到美国亚马逊仓，大概200kg，1.5CBM，想走空运加派送，请问多少钱？",
+    "expected_output_focus": [
+      "origin",
+      "destination",
+      "cargo_type",
+      "weight",
+      "volume",
+      "shipping_mode",
+      "amazon_warehouse",
+      "battery_related_risk",
+      "missing_delivery_address",
+      "missing_cargo_value"
+    ]
+  },
+  {
+    "case_id": "case_003",
+    "language": "English",
+    "inquiry": "Need a DDP quote from Guangzhou to Toronto for 10 cartons of LED lights. Not sure about weight yet. Please advise.",
+    "expected_output_focus": [
+      "origin",
+      "destination",
+      "cargo_type",
+      "ddp_requirement",
+      "missing_weight",
+      "missing_volume",
+      "missing_carton_dimensions",
+      "missing_cargo_value",
+      "missing_delivery_address"
+    ]
+  },
+  {
+    "case_id": "case_004",
+    "language": "English",
+    "inquiry": "We have 3 pallets of furniture ready in Foshan. Please help check sea freight to Sydney. The customer wants a cheaper option, not urgent.",
+    "expected_output_focus": [
+      "origin",
+      "destination",
+      "cargo_type",
+      "package_type",
+      "shipping_mode",
+      "preferred_option",
+      "missing_weight",
+      "missing_volume",
+      "missing_pickup_address",
+      "missing_delivery_address"
+    ]
+  },
+  {
+    "case_id": "case_005",
+    "language": "Chinese",
+    "inquiry": "有一批货要发到德国，想问一下价格，货物还没完全打包好，可能走海运。",
+    "expected_output_focus": [
+      "destination",
+      "shipping_mode",
+      "missing_origin",
+      "missing_cargo_type",
+      "missing_weight",
+      "missing_volume",
+      "missing_package_details",
+      "missing_delivery_deadline",
+      "missing_trade_term"
+    ]
+  }
+]
