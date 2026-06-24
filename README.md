@@ -47,6 +47,26 @@ The goal is not to automatically send quotations, but to reduce repetitive prepa
 
 **Figure 1. LogiQuote system architecture.** The system uses a Streamlit frontend, a modular LogiQuote agent workflow, and Qwen Cloud API to transform messy logistics inquiries into structured quotation briefs, missing-field checks, risk notes, reply drafts, and human-reviewable outputs.
 
+## Demo Preview
+
+### 1. Customer Inquiry Input
+
+The Streamlit interface allows logistics staff to paste a messy customer inquiry and start the AI-assisted quotation preparation workflow.
+
+![LogiQuote Input Demo](docs/screenshots/demo_input.png)
+
+### 2. Structured Field Extraction
+
+LogiQuote extracts key shipment information such as origin, destination, cargo type, weight, volume, package details, delivery requirement, and preferred option.
+
+![LogiQuote Field Extraction Demo](docs/screenshots/demo_extraction.png)
+
+### 3. Missing Field Check and Reply Draft
+
+The agent identifies missing or unclear quotation fields, provides risk notes, and generates a customer follow-up reply draft for human review.
+
+![LogiQuote Reply Draft Demo](docs/screenshots/demo_reply.png)
+
 ## Key Features
 
 * **Inquiry Summary**
