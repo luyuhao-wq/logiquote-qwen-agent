@@ -8,7 +8,7 @@ The system extracts key shipment fields, detects missing or unclear information,
 
 Independent AI Agent Portfolio Project
 
-This project demonstrates my ability to design and implement an AI-assisted workflow for a real business scenario, including problem framing, prompt design, structured output design, agent workflow development, Streamlit prototyping, and batch evaluation.
+This project demonstrates my ability to design and implement an AI-assisted workflow for a real business scenario, including problem framing, prompt design, structured output design, agent workflow development, Streamlit prototyping, demo mode design, and batch evaluation.
 
 ## Problem
 
@@ -61,11 +61,13 @@ LogiQuote extracts key shipment information such as origin, destination, cargo t
 
 ![LogiQuote Field Extraction Demo](docs/screenshots/demo_extraction.png)
 
-### 3. Missing Field Check and Reply Draft
+### 3. Missing Field Check and Risk Notes
 
-The agent identifies missing or unclear quotation fields, provides risk notes, and generates a customer follow-up reply draft for human review.
+The agent identifies missing or unclear quotation fields, provides risk notes, and recommends the next action before quotation preparation.
 
-![LogiQuote Reply Draft Demo](docs/screenshots/demo_reply.png)
+![LogiQuote Missing Field Demo](docs/screenshots/demo_missing_check.png)
+
+Additional screenshots, including customer reply draft and follow-up questions, are available in `docs/screenshots/`.
 
 ## Key Features
 
@@ -86,6 +88,12 @@ The agent identifies missing or unclear quotation fields, provides risk notes, a
 
 * **Internal Operation Notes**
   Provides internal notes to help logistics staff understand what needs to be confirmed before preparing a quotation.
+
+* **Demo Mode Without API Key**
+  Allows reviewers to explore the workflow using saved sample outputs from `data/batch_test_results.json` without configuring a Qwen API key.
+
+* **Live Qwen API Mode**
+  Allows users with a valid Qwen Cloud API key to run the agent with real-time model responses.
 
 * **Human-in-the-loop Review**
   The generated response is not automatically sent to the customer. Human review is required before any communication or quotation decision.
@@ -127,7 +135,12 @@ logiquote-qwen-agent/
 │   ├── project_story.md
 │   ├── evaluation_summary.md
 │   ├── architecture.md
-│   └── architecture_diagram.png
+│   ├── architecture_diagram.png
+│   └── screenshots/
+│       ├── demo_input.png
+│       ├── demo_extraction.png
+│       ├── demo_missing_check.png
+│       └── demo_reply_followup.png
 └── deployment/
     └── alibaba_cloud_deployment.md
 ```
@@ -266,6 +279,10 @@ Do not upload the `.env` file to GitHub.
 streamlit run app.py
 ```
 
+By default, the Streamlit app supports **Demo Mode**, which loads saved sample outputs from `data/batch_test_results.json`. This allows reviewers to explore the workflow without configuring a Qwen API key.
+
+Users who have a valid Qwen Cloud API key can switch to **Live Qwen API Mode** in the sidebar and run the agent with real-time model responses.
+
 ### 5. Run workflow tests
 
 ```bash
@@ -278,6 +295,42 @@ python test_workflow.py
 python test_batch.py
 ```
 
+## Running Modes
+
+### Demo Mode
+
+Demo Mode is designed for portfolio reviewers who want to understand the workflow without setting up API credentials.
+
+It loads saved results from:
+
+```text
+data/batch_test_results.json
+```
+
+This mode demonstrates:
+
+* Original inquiry display
+* Structured field extraction
+* Missing field check
+* Risk notes
+* Customer reply draft
+* Follow-up questions
+* Internal operation notes
+
+### Live Qwen API Mode
+
+Live Qwen API Mode calls Qwen Cloud API in real time.
+
+This mode requires a valid local `.env` file with:
+
+```text
+DASHSCOPE_API_KEY
+QWEN_BASE_URL
+QWEN_MODEL
+```
+
+The `.env` file should remain local and should not be committed to GitHub.
+
 ## Project Status
 
 Current version completed:
@@ -285,23 +338,25 @@ Current version completed:
 * Qwen Cloud API integration
 * Modular AI agent workflow
 * Streamlit demo
+* Demo Mode without API key
+* Live Qwen API Mode
 * Structured JSON field extraction
 * Missing field detection
 * Risk and clarification analysis
 * Customer reply draft generation
 * Batch testing with sample inquiries
 * Architecture documentation
+* Demo screenshots
 * Evaluation summary
 
 Planned improvements:
 
-* Add demo mode without requiring an API key
-* Add demo screenshots and GIF to the README
 * Add a portfolio case study document
 * Improve the frontend interface for clearer business presentation
 * Add export function for quotation preparation briefs
 * Connect with a mock logistics pricing database
 * Expand evaluation with more real-world inquiry examples
+* Add lightweight cloud deployment using Streamlit Community Cloud, Render, or Hugging Face Spaces
 
 ## Limitations
 
@@ -325,6 +380,7 @@ This project demonstrates:
 * Modular AI agent workflow design
 * Human-in-the-loop AI system design
 * Streamlit-based prototype development
+* Demo mode design for portfolio reviewers
 * Evaluation with multilingual sample inquiries
 * Documentation for technical and product audiences
 
